@@ -1,5 +1,6 @@
 ![Image text](https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif)
 ![image text](http://docs.form.xiaoyaoji.cn/donation.jpeg)
+![Image text](https://github.com/lightClouds917/designMode/blob/master/src/main/resources/templates/java4all_black.jpg)
 
 # 第一天
 ## 1. 项目开发准备
