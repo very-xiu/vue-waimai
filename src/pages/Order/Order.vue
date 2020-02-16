@@ -26,7 +26,7 @@ export default {
   width: 100%;
 
   .header {
-    background-color: #02a774;
+    background-color: #009AFF;
     position: fixed;
     z-index: 100;
     left: 0;
@@ -98,7 +98,7 @@ export default {
 
     >button {
       display: inline-block;
-      background: #02a774;
+      background: #009AFF;
       font-size: 14px;
       color: #fff;
       border: 0;

@@ -1,19 +1,21 @@
 <template>
   <section class="profile">
-    <HeaderTop title="我的">
-    </HeaderTop>
+    <HeaderTop title="我的"></HeaderTop>
     <section class="profile-number">
-      <router-link to="/login" class="profile-link">
+      <router-link :to="userInfo._id ? '/userinfo':'/login'" class="profile-link">
         <div class="profile_image">
-          <i class="iconfont icongerenkuang"></i>
+          <i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i>
         </div>
         <div class="user-info">
-          <p class="user-info-top">登录/注册</p>
+          <p
+            class="user-info-top"
+            :style="!userInfo.phone?true:'visibility:hidden'"
+          >{{userInfo.name||'登录/注册'}}</p>
           <p>
             <span class="user-icon">
               <i class="iconfont iconshouji icon-mobile"></i>
             </span>
-            <span class="icon-mobile-number">暂无绑定手机号</span>
+            <span class="icon-mobile-number">{{userInfo.phone||'暂无绑定手机号'}}</span>
           </p>
         </div>
         <span class="arrow">
@@ -74,20 +76,20 @@
           <i class="iconfont icon-vip"></i>
         </span>
         <div class="my_order_div">
-          <span>硅谷外卖会员卡</span>
+          <span>饿了麽外卖会员卡</span>
           <span class="my_order_icon">
             <i class="iconfont iconleft-copy"></i>
           </span>
         </div>
       </a>
     </section>
-    <section class="profile_my_order border-1px">
+    <section class="profile_my_order border-1px" style="margin-top:0">
       <!-- 服务中心 -->
       <a href="javascript:" class="my_order">
         <span>
           <i class="iconfont icon-fuwu"></i>
         </span>
-        <div class="my_order_div">
+        <div class="my_order_div noBorder">
           <span>服务中心</span>
           <span class="my_order_icon">
             <i class="iconfont iconleft-copy"></i>
@@ -95,15 +97,49 @@
         </div>
       </a>
     </section>
+    <section
+      class="profile_my_order border-1px"
+      style="background-color:transparent;width:80%;margin:10px auto 0"
+    >
+      <mt-button type="danger" style="width:100%;" v-if="userInfo._id" @click="logout">退出登录</mt-button>
+    </section>
   </section>
 </template>
 
 <script>
 import HeaderTop from "../../components/HeaderTop/HeaderTop.vue";
+import { MessageBox, Toast } from "mint-ui";
+import { mapState } from "vuex";
 
 export default {
+  /* data(){
+    return{
+      hidden:true
+    }
+  }, */
   components: {
     HeaderTop
+  },
+  methods: {
+    // 点击按钮退出登录
+    logout() {
+      MessageBox.confirm("确认退出吗?").then(
+        action => {
+          // 请求退出
+          this.$store.dispatch("logout");
+          Toast({
+            message: "已退出",
+            iconClass: "iconfont iconkuangzhonggou"
+          });
+        },
+        action => {
+          console.log("点击了取消");
+        }
+      );
+    }
+  },
+  computed: {
+    ...mapState(["userInfo"])
   }
 };
 </script>
@@ -113,16 +149,17 @@ export default {
 
 .profile { // 我的
   width: 100%;
-  overflow hidden
-  background-color #eee
+  overflow: hidden;
+
   .header {
-    background-color: #02a774;
+    background-color: #009AFF;
     position: fixed;
     z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
     height: 45px;
+    box-shadow: 0 1px 4px rgba(0, 100, 165 0.2);
 
     .header_search {
       position: absolute;
@@ -169,25 +206,27 @@ export default {
   }
 
   .profile-number {
-    margin-top: 45.5px;
+    margin-top: 44.5px;
 
     .profile-link {
       clearFix();
       position: relative;
       display: block;
-      background: #02a774;
+      background: #009AFF;
       padding: 20px 10px;
 
       .profile_image {
         float: left;
-        width: 60px;
-        height: 60px;
+        width: 62px;
+        height: 62px;
         border-radius: 50%;
         overflow: hidden;
         vertical-align: top;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 
-        .icongerenkuang {
+        .fa-user-circle-o {
           background: #e4e4e4;
+          color: #009AFF;
           font-size: 62px;
         }
       }
@@ -242,7 +281,8 @@ export default {
   }
 
   .profile_info_data {
-    bottom-border-1px(#e4e4e4);
+    // bottom-border-1px(#e4e4e4);
+    border-bottom: 1px solid #f1f1f1;
     width: 100%;
     background: #fff;
     overflow: hidden;
@@ -266,7 +306,7 @@ export default {
           span {
             display: inline-block;
             font-size: 30px;
-            color: #f90;
+            color: #009AFF;
             font-weight: 700;
             line-height: 30px;
           }
@@ -284,7 +324,7 @@ export default {
       .info_data_link:nth-of-type(2) {
         .info_data_top {
           span {
-            color: #ff5f3e;
+            color: #009AFF;
           }
         }
       }
@@ -294,7 +334,7 @@ export default {
 
         .info_data_top {
           span {
-            color: #6ac20b;
+            color: #009AFF;
           }
         }
       }
@@ -327,19 +367,20 @@ export default {
         }
 
         .icon-order-s {
-          color: #02a774;
+          color: #009AFF;
         }
 
         .icon-jifen {
-          color: #ff5f3e;
+          color: #009AFF;
         }
 
         .icon-vip {
-          color: #f90;
+          font-size: 28px;
+          color: #009AFF;
         }
 
         .icon-fuwu {
-          color: #02a774;
+          color: #009AFF;
         }
       }
 
@@ -351,6 +392,10 @@ export default {
         color: #333;
         display: flex;
         justify-content: space-between;
+
+        &.noBorder {
+          border: none;
+        }
 
         span {
           display: block;

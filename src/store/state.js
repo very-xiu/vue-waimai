@@ -1,8 +1,14 @@
 /* 状态对象 */
 export default{
-  latitude:22.34399369528191, //纬度
-  longitude:113.58570583484648, //经度
+  latitude:22.34399, //纬度
+  longitude:113.58570, //经度
   address:{}, //地址相关信息对象
   categorys:[], //食品分类数组
-  shops:[] //商家数组
+  shops:[], //商家数组
+  userInfo:{},   //用户信息
+  goods: [], // 商品列表
+  ratings: [], // 商家评价列表
+  info: {}, // 商家信息
+  cartFoods: [], // 购物车中食物的列表
+  searchShops:[]  //搜索得到的商家列表
 }
