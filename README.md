@@ -1,4 +1,3 @@
-https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif?raw=true
 ![image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif?raw=true)
 
 # 第一天
