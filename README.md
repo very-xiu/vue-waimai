@@ -1,5 +1,5 @@
-![image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif)
-![](http://docs.form.xiaoyaoji.cn/donation.jpeg)
+![Image text](https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif)
+![image text](http://docs.form.xiaoyaoji.cn/donation.jpeg)
 
 # 第一天
 ## 1. 项目开发准备
