@@ -1,4 +1,4 @@
-![image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif?raw=true)
+![image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif)
 
 # 第一天
 ## 1. 项目开发准备
