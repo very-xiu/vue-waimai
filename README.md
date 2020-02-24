@@ -1,3 +1,6 @@
+# ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/login.gif)
+# ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/zhuye.gif?raw=true)
+
 # 第一天
 ## 1. 项目开发准备
     项目描述
