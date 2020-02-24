@@ -30,7 +30,7 @@
             </a>
           </div>
         </div>
-        <!-- Add Pagination -->
+        <!-- 添加分页器 -->
         <div class="swiper-pagination"></div>
       </div>
       <img src="./images/msite_back.svg" alt="back" v-else />

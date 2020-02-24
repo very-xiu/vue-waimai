@@ -132,7 +132,7 @@ export default {
       this.alertText = alertText;
     },
 
-    // 前台表单验证
+    // 前端表单验证
     async login() {
       let result;
       if (this.loginWay) {
