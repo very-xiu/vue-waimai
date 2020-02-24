@@ -1,5 +1,5 @@
 # 项目展示预览
-# ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/elm_zhuye_2.gif?raw=true) ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/elm_zhuye.gif?raw=true)
+# ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/elm_zhuye_2.gif?raw=true)     ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/elm_zhuye.gif?raw=true)
 # ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/zhuye.gif?raw=true)
 
 # 第一天
