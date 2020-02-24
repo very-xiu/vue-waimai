@@ -1,6 +1,6 @@
 # 项目展示预览
 # ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/elm_zhuye_2.gif?raw=true) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/elm_zhuye.gif?raw=true)
-# ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/zhuye.gif?raw=true)
+# ![Image](https://github.com/very-xiu/vue-waimai/blob/master/static/images/elm_login.gif?raw=true)
 
 # 第一天
 ## 1. 项目开发准备
